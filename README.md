@@ -7,9 +7,27 @@ Get yourself a serverless REST API up with connected to a MongoDB server in a fe
 # Whats Included
 
 C- Create Documents
+
 R- Read Documents
+
 U- Update Documents
+
 D- Delete Documents
+
+# Guide
+
+First Install and configure Serverless https://github.com/serverless/serverless#quick-start
+
+Then install mongodb for node
+```javascript
+npm install mongodb --save 
+```
+
+require in the handler.js 
+```javascript
+var MongoClient = require('mongodb').MongoClient;
+```
+
 
 # More information
 
