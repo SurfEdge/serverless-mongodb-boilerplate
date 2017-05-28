@@ -1,0 +1,18 @@
+{
+  "name": "serverless-mongo-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.18.1",
+    "mongodb": "^2.2.26"
+  },
+  "devDependencies": {
+    "serverless-offline": "^3.14.0"
+  }
+}
