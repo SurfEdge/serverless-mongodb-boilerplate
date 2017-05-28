@@ -1,16 +1,18 @@
 'use strict';
 
-module.exports.hello = (event, context, callback) => {
-  const response = {
-    statusCode: 200,
-    body: JSON.stringify({
-      message: 'Go Serverless v1.0! Your function executed successfully!',
-      input: event,
-    }),
-  };
+var utils = require('./lib/utils.js');
 
-  callback(null, response);
+// To add a record to a collection
+module.exports.new = (event, context, callback) => {
+	// data is the collection name
+	// and the event.body object will be parsed and inserted
+    utils.add(event,'data',JSON.parse(event.body),callback);
+};
 
-  // Use this code if you don't use the http event with the LAMBDA-PROXY integration
-  // callback(null, { message: 'Go Serverless v1.0! Your function executed successfully!', event });
+// To view Existing Records in the collection
+module.exports.view = (event, context, callback) => {
+	// data is the collection name
+	// Third parameter is the {query} 
+	// forth is the sort order
+    utils.find(event,'data',{},{_id: -1},callback);
 };
